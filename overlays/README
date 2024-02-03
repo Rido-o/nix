@@ -1,0 +1,21 @@
+# Resolving patches
+# lib.fakeSha256 or use a proper sha from somewhere else that is wrong
+# Clone repo
+git clone example
+# Create a branch in that repo
+git branch patch1+patch2
+git checkout patch1+patch2
+# Apply patches
+curl https://patch1.url.diff | git apply --reject
+curl https://patch2.url.diff | git apply --reject
+# Manually resolve conflicts
+# Create a new diff
+git add filechanges
+git commit <patch description>
+# Create diff between last commit and current commit
+git format-patch --stdout HEAD^ > toolname-patchname-YYYYMMDD.diff
+# Or for multiple commits # <since> being the commit sha eg. 28fb3e2
+git log --oneline
+git format-patch --stdout <since> > toolname-patchname-YYYYMMDD.diff
+# Diff name example
+dmenu-centered+mousesupport-20220824.diff

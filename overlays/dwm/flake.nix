@@ -1,0 +1,18 @@
+{
+  description = "Flake containing my build of dwm";
+
+  inputs = {
+    dwm-src.url = "github:Rido-o/dwm-flexipatch";
+    # dwm-src.url = "path:/home/reid/.local/src/dwm-flexipatch";
+    dwm-src.flake = false;
+  };
+
+  outputs = { self, dwm-src }: {
+    overlay = self: super: {
+      dwm = super.dwm.overrideAttrs (oldAttrs: {
+        src = dwm-src;
+        buildInputs = oldAttrs.buildInputs ++ [ super.xorg.libxcb ];
+      });
+    };
+  };
+}
