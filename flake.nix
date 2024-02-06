@@ -61,6 +61,7 @@
             ./hosts/${host}
             inputs.home-manager.nixosModules.home-manager
             {
+              system.stateVersion = "22.11";
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;

@@ -107,5 +107,5 @@
     3702 # samba-wsdd
   ];
 
-  system.stateVersion = "22.11"; # Did you read the comment?
+  # system.stateVersion = "22.11"; # Did you read the comment?
 }
