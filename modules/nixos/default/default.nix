@@ -55,7 +55,7 @@ in
         killall
         git
         git-crypt
-        neovim
+        # neovim
       ];
     };
 }
