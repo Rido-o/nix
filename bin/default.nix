@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
-  scripts = [
-    (_: _: { nay = pkgs.callPackage ./nay { }; })
-    (_: _: { dkr = pkgs.callPackage ./dkr { }; })
+{
+  overlays = [
+    (_: prev: { nay = prev.callPackage ./nay { }; })
+    (_: prev: { dkr = prev.callPackage ./dkr { }; })
   ];
 }

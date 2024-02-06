@@ -50,7 +50,7 @@
             ]
             ++ overlays.overlays
             ++ packages.overlays.x86_64-linux
-            ++ (import ./bin { inherit pkgs; }).scripts;
+            ++ (import ./bin).overlays;
           };
           secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
         in

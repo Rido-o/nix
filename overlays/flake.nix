@@ -14,7 +14,6 @@
       dwmblocks.overlay
       xmenu.overlay
       # dmenu.overlay
-    ] ++ [
       (import ./st)
     ];
   };
