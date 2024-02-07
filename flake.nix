@@ -2,37 +2,32 @@
   description = "NixOS configuration";
 
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
 
-    # Home manager
     home-manager = {
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Neovim
     nvim = {
       url = "github:Rido-o/nvim";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     firefox-addons = {
-      # https://gitlab.com/rycee/nur-expressions/-/tree/master/pkgs/firefox-addons
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Overlays & Packages
     overlays.url = "path:./overlays";
     packages.url = "path:./packages";
-    packages.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nixpkgs, ... }:
     let
+      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
       pkgs = system: import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -47,10 +42,9 @@
           })
         ]
         ++ overlays.overlays
-        ++ packages.overlays.${system}
+        ++ packages.overlays
         ++ (import ./bin).overlays;
       };
-      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
       mkConfiguration = config: with config;
         nixpkgs.lib.nixosSystem {
           inherit system;

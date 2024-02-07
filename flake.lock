@@ -213,14 +213,28 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1707205916,
+        "narHash": "sha256-fmRJilYGlB7VCt3XsdYxrA0u8e/K84O5xYucerUY0iM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8cc79aa39bbc6eaedaf286ae655b224c71e02907",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "nsxiv-rifle": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nsxiv-rifle-src": "nsxiv-rifle-src"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-9Buk/a52XdkRrKMYyve3CRpFvPSO0ZhO+iWgqdIlA5c=",
+        "narHash": "sha256-V7ucLuujqfSf3H0KXtdLdrbg7nNGIXPrGmiNlEH1KQ0=",
         "path": "./nsxiv-rifle",
         "type": "path"
       },
@@ -285,14 +299,12 @@
     },
     "packages": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs_2",
         "nsxiv-rifle": "nsxiv-rifle"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-gakKHWkpRc4/X0F1QpF62rxIcVcfNm/tmcRs5JPo/5Y=",
+        "narHash": "sha256-u9tQdp/ta6G5h1tNCkfIbP/dh5bSmGl+mcNxBts6M7M=",
         "path": "./packages",
         "type": "path"
       },

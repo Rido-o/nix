@@ -56,3 +56,6 @@
 - [how-to-package-my-software](https://unix.stackexchange.com/questions/717168/how-to-package-my-software-in-nix-or-write-my-own-package-derivation-for-nixpkgs)
     - Answer on stackexchange with various examples for packaging software
 - [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
+    - Excellent starter config that I took a lot of inspiration from
+- [rycee/firefox-addons](https://gitlab.com/rycee/nur-expressions/-/tree/master/pkgs/firefox-addons)
+    - Used for firefox addons

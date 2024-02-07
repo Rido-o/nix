@@ -10,7 +10,7 @@ pkgs.mkShell {
   shellHook = ''
     alias install="echo foo"
 
-    echo "type ... to install nixos"
+    echo "type (sudo nixos-rebuild switch --flake .#<host> --update-input overlays --update-input packages) to install nixos"
     PATH=${pkgs.writeShellScriptBin "nix" ''
       ${pkgs.nixFlakes}/bin/nix --experimental-features "nix-command flakes" "$@"
     ''}/bin:$PATH
