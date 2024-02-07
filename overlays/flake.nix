@@ -5,6 +5,7 @@
     dwm.url = "path:./dwm";
     xmenu.url = "path:./xmenu";
     dmenu.url = "path:./dmenu";
+    nsxiv-rifle.url = "path:./nsxiv-rifle";
   };
 
   outputs = inputs@{ self, ... }: {
@@ -12,6 +13,7 @@
       dwm.overlay
       xmenu.overlay
       # dmenu.overlay
+      nsxiv-rifle.overlays.default
       (import ./st)
     ];
   };

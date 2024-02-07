@@ -14,14 +14,14 @@ clean(){
 }
 
 update(){ # learn how to remove first variable from list of variables so i can go $@ for --update-input nvim
-    nixos-rebuild switch --flake /home/reid/.nix\#"$1" --recreate-lock-file --update-input packages --update-input overlays "${@:2}" &&
+    nixos-rebuild switch --flake /home/reid/.nix\#"$1" --recreate-lock-file --update-input overlays "${@:2}" &&
     readarray -t systems < <(find /nix/var/nix/profiles/system-*-link | tail -n2)
     nvd diff "${systems[@]}"
     exit 0
 }
 
 apply(){
-    nixos-rebuild switch --flake /home/reid/.nix\#"$1" --update-input packages --update-input overlays "${@:2}" &&
+    nixos-rebuild switch --flake /home/reid/.nix\#"$1" --update-input overlays "${@:2}" &&
     readarray -t systems < <(find /nix/var/nix/profiles/system-*-link | tail -n2)
     nvd diff "${systems[@]}"
     exit 0

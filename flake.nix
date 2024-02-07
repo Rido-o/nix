@@ -22,7 +22,6 @@
     };
 
     overlays.url = "path:./overlays";
-    packages.url = "path:./packages";
   };
 
   outputs = inputs@{ self, nixpkgs, ... }:
@@ -42,7 +41,6 @@
           })
         ]
         ++ overlays.overlays
-        ++ packages.overlays
         ++ (import ./bin).overlays;
       };
       mkConfiguration = config: with config;

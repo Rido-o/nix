@@ -199,23 +199,9 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1707205916,
-        "narHash": "sha256-fmRJilYGlB7VCt3XsdYxrA0u8e/K84O5xYucerUY0iM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8cc79aa39bbc6eaedaf286ae655b224c71e02907",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
     "nsxiv-rifle": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nsxiv-rifle-src": "nsxiv-rifle-src"
       },
       "locked": {
@@ -269,32 +255,17 @@
       "inputs": {
         "dmenu": "dmenu",
         "dwm": "dwm",
+        "nsxiv-rifle": "nsxiv-rifle",
         "xmenu": "xmenu"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-ffSlamMYLR+yN7twIwj7GSMjPvxSpc/P2beMWWS+W18=",
+        "narHash": "sha256-UkmA6LT3WjdSRzCPS4wJZ14DG2I0VqzXmy9MJd8R3bg=",
         "path": "./overlays",
         "type": "path"
       },
       "original": {
         "path": "./overlays",
-        "type": "path"
-      }
-    },
-    "packages": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_2",
-        "nsxiv-rifle": "nsxiv-rifle"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-LDn13+bxvXxMason1CsHC8StUaXRnKEX58etf4n1YXo=",
-        "path": "./packages",
-        "type": "path"
-      },
-      "original": {
-        "path": "./packages",
         "type": "path"
       }
     },
@@ -306,8 +277,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nvim": "nvim",
-        "overlays": "overlays",
-        "packages": "packages"
+        "overlays": "overlays"
       }
     },
     "xmenu": {
