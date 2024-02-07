@@ -33,29 +33,28 @@
 
   outputs = inputs@{ self, nixpkgs, ... }:
     let
+      pkgs = system: import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = with inputs; [
+          nvim.overlays.default
+          (_: _: { firefox-addons = firefox-addons.packages.${system}; })
+          (_: _: {
+            unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          })
+        ]
+        ++ overlays.overlays
+        ++ packages.overlays.${system}
+        ++ (import ./bin).overlays;
+      };
+      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
       mkConfiguration = config: with config;
-        let
-          pkgs = import nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-            overlays = with inputs; [
-              nvim.overlays.default
-              (_: _: { firefox-addons = firefox-addons.packages.${system}; })
-              (_: _: {
-                unstable = import nixpkgs-unstable {
-                  inherit system;
-                  config.allowUnfree = true;
-                };
-              })
-            ]
-            ++ overlays.overlays
-            ++ packages.overlays.x86_64-linux
-            ++ (import ./bin).overlays;
-          };
-          secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
-        in
         nixpkgs.lib.nixosSystem {
-          inherit system pkgs;
+          inherit system;
+          pkgs = pkgs system;
           specialArgs = { inherit inputs user host secrets; };
           modules = [
             ./hosts/${host}

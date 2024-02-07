@@ -1,4 +1,4 @@
-{ lib, ... }: with lib; rec {
+lib: with lib; rec {
   # https://reddit.com/r/NixOS/comments/j5pa9o/getting_all_configs_from_folder/
 
   # Recursively constructs an attrset of a given folder, recursing on directories, value of attrs is the filetype

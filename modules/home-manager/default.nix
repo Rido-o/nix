@@ -1,8 +1,8 @@
-# { lib, ... }:
+{ lib, ... }:
 let
-  libx = import ../../lib;
+  funcs = import ../../lib/default.nix lib;
 in
 {
   # Imports all directories in current dirctory
-  imports = libx.validFiles ./.;
+  imports = funcs.validFiles ./.;
 }
