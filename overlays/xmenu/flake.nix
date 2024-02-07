@@ -7,8 +7,8 @@
   };
 
   outputs = { self, xmenu-src }: {
-    overlay = self: super: {
-      xmenu = super.xmenu.overrideAttrs (oldAttrs: rec {
+    overlay = final: prev: {
+      xmenu = prev.xmenu.overrideAttrs (oldAttrs: rec {
         src = xmenu-src;
         configFile = ./config.h;
         postPatch = "

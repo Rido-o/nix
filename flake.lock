@@ -6,7 +6,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-wdRV+aRIQ+SUcCTtXgEo8dFtOdIZ1hNDo9uciGlELXI=",
+        "narHash": "sha256-BVAFLL/CCF6uj2tvGCGvZ1NvvmpHJ5lFv+D8IrdaaGw=",
         "path": "./dmenu",
         "type": "path"
       },
@@ -33,11 +33,12 @@
     },
     "dwm": {
       "inputs": {
-        "dwm-src": "dwm-src"
+        "dwm-src": "dwm-src",
+        "dwmblocks-src": "dwmblocks-src"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-ff/Qgsf61zE63EHBFHnNsPsy0MBv4XCTRA8Cj8/rZc4=",
+        "narHash": "sha256-JXkp7qwD5p6fL4Zd3JCRNVC1VhBQEkz+MYgGrvlWAm8=",
         "path": "./dwm",
         "type": "path"
       },
@@ -60,21 +61,6 @@
         "owner": "Rido-o",
         "repo": "dwm-flexipatch",
         "type": "github"
-      }
-    },
-    "dwmblocks": {
-      "inputs": {
-        "dwmblocks-src": "dwmblocks-src"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-/9TXNviaIpuTYKark4j4+oDBrw+gypCE7hwM+/46U24=",
-        "path": "./dwmblocks",
-        "type": "path"
-      },
-      "original": {
-        "path": "./dwmblocks",
-        "type": "path"
       }
     },
     "dwmblocks-src": {
@@ -283,12 +269,11 @@
       "inputs": {
         "dmenu": "dmenu",
         "dwm": "dwm",
-        "dwmblocks": "dwmblocks",
         "xmenu": "xmenu"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-HyhWxhJTsXTyqrFS7AbClat3QKP7zTbwzCUHgebF85Q=",
+        "narHash": "sha256-ffSlamMYLR+yN7twIwj7GSMjPvxSpc/P2beMWWS+W18=",
         "path": "./overlays",
         "type": "path"
       },
@@ -304,7 +289,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-u9tQdp/ta6G5h1tNCkfIbP/dh5bSmGl+mcNxBts6M7M=",
+        "narHash": "sha256-LDn13+bxvXxMason1CsHC8StUaXRnKEX58etf4n1YXo=",
         "path": "./packages",
         "type": "path"
       },
@@ -331,7 +316,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-8oJ2LxOubwKg/MDUmYmvXGfWSXNxWey7P9Cn1Jm6+Vs=",
+        "narHash": "sha256-O2GMGkgYMPuIstfiM4Dqn3l6qzp/yOK/5ZFGIAKTlR8=",
         "path": "./xmenu",
         "type": "path"
       },

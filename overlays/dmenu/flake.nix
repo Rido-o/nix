@@ -7,8 +7,8 @@
   };
 
   outputs = { self, dmenu-src }: {
-    overlay = self: super: {
-      dmenu = super.dmenu.overrideAttrs (oldAttrs: rec {
+    overlay = final: prev: {
+      dmenu = prev.dmenu.overrideAttrs (oldAttrs: rec {
         src = dmenu-src;
         patches = [
           # https://tools.suckless.org/dmenu/patches/xresources/dmenu-xresources-4.9.diff
