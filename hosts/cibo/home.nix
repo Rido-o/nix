@@ -6,6 +6,7 @@
     nnn.enable = true;
     stylua.enable = true;
     gallery-dl.enable = true;
+    lf.enable = true;
   };
   home = {
     # install unstable with unstable.{pkg} prefix
