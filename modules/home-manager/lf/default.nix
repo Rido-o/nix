@@ -21,6 +21,20 @@ in
       commands = {
         editor-open = ''$$EDITOR $f'';
         chmod-minus-x = ''%chmod -x $f'';
+        mkfile = ''
+          ''${{
+            printf "File Name: "
+            read FILE
+            touch $FILE
+          }}
+        '';
+        mkdir = ''
+          ''${{
+            printf "Directory Name: "
+            read DIR
+            mkdir $DIR
+          }}
+        '';
       };
 
       keybindings = {
@@ -30,6 +44,8 @@ in
         "<enter>" = "open";
         "*" = "chmod-minus-x";
         "~" = "cd";
+        of = "mkfile";
+        od = "mkdir";
       };
 
       settings = {
