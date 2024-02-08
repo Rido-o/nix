@@ -42,6 +42,10 @@ in
         info = "size:time";
         dircounts = true;
       };
+
+      extraConfig = ''
+        set cursorpreviewfmt "\033[7m"
+      '';
     };
   };
 }
