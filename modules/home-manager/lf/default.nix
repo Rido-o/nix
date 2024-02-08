@@ -20,7 +20,7 @@ in
 
       commands = {
         editor-open = ''$$EDITOR $f'';
-        # chmod-minus-x = ''chmod -x $f'';
+        chmod-minus-x = ''%chmod -x $f'';
       };
 
       keybindings = {
@@ -28,7 +28,7 @@ in
         "<backspace2>" = "updir";
         "." = "set hidden!";
         "<enter>" = "open";
-        # "*" = "chmod-minus-x";
+        "*" = "chmod-minus-x";
         "~" = "cd";
       };
 
@@ -39,6 +39,8 @@ in
         icons = true;
         ignorecase = true;
         ratios = "1:2";
+        info = "size:time";
+        dircounts = true;
       };
     };
   };
