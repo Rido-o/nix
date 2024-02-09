@@ -21,6 +21,8 @@ in
       commands = {
         editor-open = ''$$EDITOR $f'';
         chmod-minus-x = ''%chmod -x $f'';
+        trash-put = ''%${pkgs.trashy}/bin/trash put $fx'';
+        trash-restore = ''%${pkgs.trashy}/bin/trash restore -fr 0'';
         mkfile = ''
           ''${{
             printf "File Name: "
@@ -46,6 +48,9 @@ in
         "~" = "cd";
         of = "mkfile";
         od = "mkdir";
+        x = "trash-put";
+        "<delete>" = "trash-put";
+        U = "trash-restore";
       };
 
       settings = {
