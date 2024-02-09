@@ -2,9 +2,6 @@
 with lib;
 let
   cfg = config.shard.lf;
-  lfcd = pkgs.writeShellScriptBin "n" ''
-    cd "$(command ${pkgs.unstable.lf}/bin/lf -print-last-dir "$@")"
-  '';
 in
 {
   options.shard.lf = {
@@ -13,7 +10,12 @@ in
 
   config = mkIf cfg.enable {
     xdg.configFile."lf/icons".source = ./icons;
-    home.packages = [ lfcd ];
+    programs.zsh.initExtra = ''
+      lfcd () {
+        cd "$(command ${pkgs.unstable.lf}/bin/lf -print-last-dir "$@")"
+      }
+      alias n='lfcd'
+    '';
     programs.lf = {
       enable = true;
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 pull(){
     docker-compose -f "$HOME/.docker/${1}/docker-compose.yml" pull
     docker-compose -f "$HOME/.docker/${1}/docker-compose.yml" up -d --remove-orphans --always-recreate-deps
