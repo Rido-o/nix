@@ -3,7 +3,6 @@
   imports = [ ../../modules/home-manager ];
   shard = {
     default.enable = true;
-    nnn.enable = true;
     stylua.enable = true;
     gallery-dl.enable = true;
     lf.enable = true;
