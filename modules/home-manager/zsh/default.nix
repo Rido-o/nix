@@ -20,9 +20,9 @@ in
         size = 10000;
         save = 10000;
       };
-      envExtra = ''
-        ${builtins.readFile ./.zshenv}
-      '';
+      # envExtra = ''
+      #   ${builtins.readFile ./.zshenv}
+      # '';
       initExtra = ''
         ${builtins.readFile ./.zshrc}
       '';

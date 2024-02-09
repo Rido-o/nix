@@ -2,10 +2,10 @@
 
 # Program Environment variables
 # export EDITOR="nvim"
-export TERMINAL="st"
-export BROWSER="qutebrowser"
+# export TERMINAL="st"
+# export BROWSER="qutebrowser"
 # export PAGER="most"
-export AUDIOPATH="$HOME/Audio"
+# export AUDIOPATH="$HOME/Audio"
 
 # Enable colors
 autoload -U colors && colors
@@ -69,24 +69,18 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # General aliases
-alias config='git --git-dir=$HOME/.cfg/dotfiles --work-tree=$HOME'
-alias configp='git --git-dir=$HOME/.cfg/dotfiles-private --work-tree=$HOME'
 alias ls='ls --color=auto --group-directories-first'
-alias gsudo='sudo git -c include.path=$HOME/.config/git/config'
-alias j='z'
 alias lg='lazygit'
-alias lgc='lazygit --git-dir=$HOME/.cfg/dotfiles --work-tree=$HOME'
-alias lgp='lazygit --git-dir=$HOME/.cfg/dotfiles-private --work-tree=$HOME'
 
 # Trash aliases
-alias tp='trash-put'
-alias te='trash-empty'
-alias tl='trash-list'
-alias tre='trash-restore'
-alias trm='trash-rm'
+# alias tp='trash-put'
+# alias te='trash-empty'
+# alias tl='trash-list'
+# alias tre='trash-restore'
+# alias trm='trash-rm'
 
 # Plugins
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+# [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # Keybinds
 bindkey '^[[Z' autosuggest-accept
