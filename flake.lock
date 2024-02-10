@@ -1,20 +1,5 @@
 {
   "nodes": {
-    "dmenu": {
-      "inputs": {
-        "dmenu-src": "dmenu-src"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-BVAFLL/CCF6uj2tvGCGvZ1NvvmpHJ5lFv+D8IrdaaGw=",
-        "path": "./dmenu",
-        "type": "path"
-      },
-      "original": {
-        "path": "./dmenu",
-        "type": "path"
-      }
-    },
     "dmenu-src": {
       "flake": false,
       "locked": {
@@ -29,22 +14,6 @@
       "original": {
         "type": "git",
         "url": "https://git.suckless.org/dmenu"
-      }
-    },
-    "dwm": {
-      "inputs": {
-        "dwm-src": "dwm-src",
-        "dwmblocks-src": "dwmblocks-src"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-JXkp7qwD5p6fL4Zd3JCRNVC1VhBQEkz+MYgGrvlWAm8=",
-        "path": "./dwm",
-        "type": "path"
-      },
-      "original": {
-        "path": "./dwm",
-        "type": "path"
       }
     },
     "dwm-src": {
@@ -253,14 +222,12 @@
     },
     "overlays": {
       "inputs": {
-        "dmenu": "dmenu",
-        "dwm": "dwm",
         "nsxiv-rifle": "nsxiv-rifle",
-        "xmenu": "xmenu"
+        "suckless": "suckless"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-UkmA6LT3WjdSRzCPS4wJZ14DG2I0VqzXmy9MJd8R3bg=",
+        "narHash": "sha256-Y08O1Vw77r7pHwQxe4CVs2j81bXYa+y7ezE5e8/O2Fo=",
         "path": "./overlays",
         "type": "path"
       },
@@ -280,18 +247,21 @@
         "overlays": "overlays"
       }
     },
-    "xmenu": {
+    "suckless": {
       "inputs": {
+        "dmenu-src": "dmenu-src",
+        "dwm-src": "dwm-src",
+        "dwmblocks-src": "dwmblocks-src",
         "xmenu-src": "xmenu-src"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-O2GMGkgYMPuIstfiM4Dqn3l6qzp/yOK/5ZFGIAKTlR8=",
-        "path": "./xmenu",
+        "narHash": "sha256-WLEQwBnERJ1jrBAKpT8NVCgfjd71Wz212gesVY8pIRs=",
+        "path": "./suckless",
         "type": "path"
       },
       "original": {
-        "path": "./xmenu",
+        "path": "./suckless",
         "type": "path"
       }
     },
