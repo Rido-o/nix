@@ -10,7 +10,7 @@ in
 
   config = mkIf cfg.enable {
     xdg.configFile."lf/icons".source = ./icons;
-    programs.zsh = lib.mkIf config.programs.zsh.enable {
+    programs.zsh = mkIf config.programs.zsh.enable {
       initExtra = ''
         lfcd () {
           cd "$(command ${pkgs.unstable.lf}/bin/lf -print-last-dir "$@")"
