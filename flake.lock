@@ -180,7 +180,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-KszbfOPIy0CTHq5ksNfp9JE9wirhTk3q2Yif6QEwDEM=",
+        "narHash": "sha256-I+ogd2YiLUZ6ZkTH83P100wE0RmfAku/eUjsr8NbBmY=",
         "path": "./overlays",
         "type": "path"
       },
@@ -209,7 +209,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-WLEQwBnERJ1jrBAKpT8NVCgfjd71Wz212gesVY8pIRs=",
+        "narHash": "sha256-I6ag+UfSaSG4XhlmC0i2Yt4pyKGxF3qMQQVQ4oi6j9Q=",
         "path": "./suckless",
         "type": "path"
       },

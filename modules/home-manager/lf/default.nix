@@ -10,12 +10,14 @@ in
 
   config = mkIf cfg.enable {
     xdg.configFile."lf/icons".source = ./icons;
-    programs.zsh.initExtra = ''
-      lfcd () {
-        cd "$(command ${pkgs.unstable.lf}/bin/lf -print-last-dir "$@")"
-      }
-      alias n='lfcd'
-    '';
+    programs.zsh = lib.mkIf config.programs.zsh.enable {
+      initExtra = ''
+        lfcd () {
+          cd "$(command ${pkgs.unstable.lf}/bin/lf -print-last-dir "$@")"
+        }
+        alias n='lfcd'
+      '';
+    };
     programs.lf = {
       enable = true;
 

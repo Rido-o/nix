@@ -59,3 +59,5 @@
     - Excellent starter config that I took a lot of inspiration from
 - [rycee/firefox-addons](https://gitlab.com/rycee/nur-expressions/-/tree/master/pkgs/firefox-addons)
     - Used for firefox addons
+- [Conditional_Implementation](https://nixos.wiki/wiki/Extend_NixOS#Conditional_Implementation)
+    - Helped me figure out how to enbable things in modules only when other modules are enabled
