@@ -154,52 +154,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1707451808,
-        "narHash": "sha256-UwDBUNHNRsYKFJzyTMVMTF5qS4xeJlWoeyJf+6vvamU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nsxiv-rifle": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_2",
-        "nsxiv-rifle-src": "nsxiv-rifle-src"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-V7ucLuujqfSf3H0KXtdLdrbg7nNGIXPrGmiNlEH1KQ0=",
-        "path": "./nsxiv-rifle",
-        "type": "path"
-      },
-      "original": {
-        "path": "./nsxiv-rifle",
-        "type": "path"
-      }
-    },
-    "nsxiv-rifle-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696277745,
-        "narHash": "sha256-TzCj2qCaV79tKPpvLaQehWKSY8fcvCzhBMe5rgwIzk8=",
-        "ref": "refs/heads/master",
-        "rev": "c87a138e00fa6e799075d9ff19e1b1fb438e3ffc",
-        "revCount": 172,
-        "type": "git",
-        "url": "https://codeberg.org/nsxiv/nsxiv-extra"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://codeberg.org/nsxiv/nsxiv-extra"
-      }
-    },
     "nvim": {
       "inputs": {
         "nixpkgs": [
@@ -222,12 +176,11 @@
     },
     "overlays": {
       "inputs": {
-        "nsxiv-rifle": "nsxiv-rifle",
         "suckless": "suckless"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-Y08O1Vw77r7pHwQxe4CVs2j81bXYa+y7ezE5e8/O2Fo=",
+        "narHash": "sha256-KszbfOPIy0CTHq5ksNfp9JE9wirhTk3q2Yif6QEwDEM=",
         "path": "./overlays",
         "type": "path"
       },

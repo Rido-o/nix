@@ -3,12 +3,11 @@
 
   inputs = {
     suckless.url = "path:./suckless";
-    nsxiv-rifle.url = "path:./nsxiv-rifle";
   };
 
   outputs = inputs@{ self, ... }: {
     overlays = with inputs; [
-      nsxiv-rifle.overlays.default
+      (import ./nsxiv-rifle)
       suckless.overlay
     ];
   };
