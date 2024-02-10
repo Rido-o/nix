@@ -20,9 +20,11 @@ in
             sha256 = "sha256-Hpc8YaJeAzJoEi7aJ6DntH2VLkoR6ToP6tPYn3llR7k=";
           } + /plugins;
       };
-      zsh.initExtra = ''
-        ${builtins.readFile ./.zshrc}
-      ''; # TODO only if zsh is installed
+      zsh = mkIf config.programs.zsh.enable {
+        initExtra = ''
+          ${builtins.readFile ./.zshrc}
+        '';
+      };
     };
     home.sessionVariables = {
       LC_COLLATE = "C";

@@ -13,6 +13,8 @@ in
     programs.neovim = {
       defaultEditor = true;
     };
-    programs.zsh.initExtra = ''export EDITOR="nvim"''; # TODO only if zsh is installed
+    programs.zsh = mkIf config.programs.zsh.enable {
+      initExtra = ''export EDITOR="nvim"'';
+    };
   };
 }

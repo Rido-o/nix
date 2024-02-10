@@ -15,7 +15,7 @@ in
         name = "default";
         id = 0;
         isDefault = true;
-        extensions = with pkgs.firefox-addons; [
+        extensions = with pkgs.firefox-addons; mkIf pkgs.firefox-addons [
           ublock-origin
           bitwarden
           violentmonkey
