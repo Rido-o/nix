@@ -1,4 +1,4 @@
-inputs: with inputs; final: prev: {
+inputs: final: prev: with inputs; {
   dwm = prev.dwm.overrideAttrs (oldAttrs: {
     src = dwm-src;
     buildInputs = oldAttrs.buildInputs ++ [ prev.xorg.libxcb ];

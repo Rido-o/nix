@@ -40,6 +40,7 @@
         overlays = with inputs; [
           nvim.overlays.default
           (import ./bin)
+          (import ./overlays inputs)
           (_: _: { firefox-addons = firefox-addons.packages.${system}; })
           (_: _: {
             unstable = import nixpkgs-unstable {
@@ -47,8 +48,7 @@
               config.allowUnfree = true;
             };
           })
-        ]
-        ++ (import ./overlays inputs);
+        ];
       };
       mkConfiguration = config: with config;
         nixpkgs.lib.nixosSystem {
