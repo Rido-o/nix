@@ -174,48 +174,18 @@
         "type": "github"
       }
     },
-    "overlays": {
-      "inputs": {
-        "suckless": "suckless"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-I+ogd2YiLUZ6ZkTH83P100wE0RmfAku/eUjsr8NbBmY=",
-        "path": "./overlays",
-        "type": "path"
-      },
-      "original": {
-        "path": "./overlays",
-        "type": "path"
-      }
-    },
     "root": {
       "inputs": {
+        "dmenu-src": "dmenu-src",
+        "dwm-src": "dwm-src",
+        "dwmblocks-src": "dwmblocks-src",
         "firefox-addons": "firefox-addons",
         "hardware": "hardware",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nvim": "nvim",
-        "overlays": "overlays"
-      }
-    },
-    "suckless": {
-      "inputs": {
-        "dmenu-src": "dmenu-src",
-        "dwm-src": "dwm-src",
-        "dwmblocks-src": "dwmblocks-src",
         "xmenu-src": "xmenu-src"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-I6ag+UfSaSG4XhlmC0i2Yt4pyKGxF3qMQQVQ4oi6j9Q=",
-        "path": "./suckless",
-        "type": "path"
-      },
-      "original": {
-        "path": "./suckless",
-        "type": "path"
       }
     },
     "xmenu-src": {

@@ -6,9 +6,9 @@
 
 #### General Usage
 - Routine update
-    - `sudo nixos-rebuild switch --flake ~/.nix#cibo --update-input overlays --update-inputs packages --update-inputs nvim`
+    - `sudo nixos-rebuild switch --flake ~/.nix#cibo --update-inputs nvim`
 - Full update
-    - `sudo nixos-rebuild switch --flake ~/.nix#cibo --recreate-lock-file --update-input overlays --update-inputs packages --update-inputs nvim`
+    - `sudo nixos-rebuild switch --flake ~/.nix#cibo --recreate-lock-file --update-inputs packages --update-inputs nvim`
 - Update only the lockfile
     - `nix flake update`
 - Test a package before installing

@@ -21,7 +21,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    overlays.url = "path:./overlays";
+    dwm-src.url = "github:Rido-o/dwm-flexipatch";
+    dwm-src.flake = false;
+    dwmblocks-src.url = "github:UtkarshVerma/dwmblocks-async";
+    dwmblocks-src.flake = false;
+    dmenu-src.url = "git+https://git.suckless.org/dmenu";
+    dmenu-src.flake = false;
+    xmenu-src.url = "github:phillbush/xmenu";
+    xmenu-src.flake = false;
   };
 
   outputs = inputs@{ self, nixpkgs, ... }:
@@ -41,7 +48,7 @@
             };
           })
         ]
-        ++ overlays.overlays;
+        ++ (import ./overlays inputs);
       };
       mkConfiguration = config: with config;
         nixpkgs.lib.nixosSystem {
