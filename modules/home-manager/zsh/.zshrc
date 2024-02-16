@@ -72,6 +72,10 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 alias ls='ls --color=auto --group-directories-first'
 alias lg='lazygit'
 
+# zoxide
+eval "$(zoxide init zsh)"
+alias cd='z'
+
 # Trash aliases
 # alias tp='trash-put'
 # alias te='trash-empty'

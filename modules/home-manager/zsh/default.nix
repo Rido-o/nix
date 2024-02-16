@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 with lib;
 let
   cfg = config.shard.zsh;
@@ -9,6 +9,9 @@ in
   };
 
   config = mkIf cfg.enable {
+    home.packages = with pkgs; [
+      zoxide
+    ];
     programs.zsh = {
       enable = true;
       enableAutosuggestions = true;
