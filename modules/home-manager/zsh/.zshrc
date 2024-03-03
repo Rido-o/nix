@@ -73,8 +73,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias lg='lazygit'
 
 # zoxide
-eval "$(zoxide init zsh)"
-alias cd='z'
+eval "$(zoxide init --cmd cd zsh)"
 
 # Trash aliases
 # alias tp='trash-put'
