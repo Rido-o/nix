@@ -64,3 +64,4 @@
 #### Auto upgrade
 - [Automatic system upgrades](https://nixos.wiki/wiki/Automatic_system_upgrades)
 - [Reddit post](https://www.reddit.com/r/NixOS/comments/yultt3/what_has_your_experience_been_with/)
+- [Nix discourse](https://discourse.nixos.org/t/best-practices-for-auto-upgrades-of-flake-enabled-nixos-systems/31255)
