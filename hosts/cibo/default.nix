@@ -1,4 +1,4 @@
-{ pkgs, user, host, ... }:
+{ pkgs, inputs, user, host, ... }:
 {
   imports =
     [
@@ -11,6 +11,22 @@
     telegraf.enable = true;
     uefi.enable = true;
   };
+
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "--commit-lock-file"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
+  # nix.settings = {
+  #   commit-lockfile-summary = "chore: update flake.lock";
+  # };
 
   networking.hostName = "${host}"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.

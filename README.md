@@ -61,3 +61,6 @@
     - Used for firefox addons
 - [Conditional_Implementation](https://nixos.wiki/wiki/Extend_NixOS#Conditional_Implementation)
     - Helped me figure out how to enbable things in modules only when other modules are enabled
+#### Auto upgrade
+- [Automatic system upgrades](https://nixos.wiki/wiki/Automatic_system_upgrades)
+- [Reddit post](https://www.reddit.com/r/NixOS/comments/yultt3/what_has_your_experience_been_with/)

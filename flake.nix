@@ -1,5 +1,6 @@
 {
   description = "NixOS configuration";
+  nixConfig.commit-lockfile-summary = "chore: Update flake.lock";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
