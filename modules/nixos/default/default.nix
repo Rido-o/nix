@@ -50,6 +50,13 @@ in
         };
       };
 
+      programs.git.config = {
+        user = {
+          name = "Rido";
+          email = "rido@airmail.cc";
+        };
+      };
+
       # List packages installed in system profile. To search, run: $ nix search wget
       environment.systemPackages = with pkgs; [
         killall
