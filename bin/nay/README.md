@@ -14,6 +14,8 @@
 ### Usage examples
     - [apply]
         - `sudo nay apply cibo`
+    - [run]
+        - `nay run cowsay moo`
 
 ### Extras
 - nvd

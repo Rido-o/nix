@@ -47,7 +47,7 @@ develop(){
 }
 
 run(){
-    nix run "$@"
+    nix run nixpkgs\#"$1" "${@:2}"
     exit 0
 }
 
