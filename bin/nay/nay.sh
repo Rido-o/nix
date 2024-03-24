@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+NIX_DIR=/home/reid/.nix
+
 showHelp(){
 cat << EOF
 usage:
@@ -12,14 +18,14 @@ clean(){
 }
 
 update(){ # learn how to remove first variable from list of variables so i can go $@ for --update-input nvim
-    nixos-rebuild switch --flake /home/reid/.nix\#"$1" --recreate-lock-file "${@:2}" &&
+    nixos-rebuild switch --flake $NIX_DIR\#"$1" --recreate-lock-file "${@:2}" --commit-lock-file &&
     readarray -t systems < <(find /nix/var/nix/profiles/system-*-link | tail -n2)
     nvd diff "${systems[@]}"
     exit 0
 }
 
 apply(){
-    nixos-rebuild switch --flake /home/reid/.nix\#"$1" "${@:2}" &&
+    nixos-rebuild switch --flake $NIX_DIR\#"$1" "${@:2}" &&
     readarray -t systems < <(find /nix/var/nix/profiles/system-*-link | tail -n2)
     nvd diff "${systems[@]}"
     exit 0

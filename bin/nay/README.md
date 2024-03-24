@@ -11,6 +11,10 @@
     - help
     - flake templates?
 
+### Usage examples
+    - [apply]
+        - `sudo nay apply cibo`
+
 ### Extras
 - nvd
     - [cmd insipiration](https://gitlab.com/khumba/nvd/-/issues/12)
